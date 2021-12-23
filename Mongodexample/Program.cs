@@ -4,6 +4,11 @@ using Mongodexample.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+    options.AddPolicy(name: "AllowAnyOrigin", builder => builder.AllowAnyOrigin())
+);
+
+
 // Add services to the container.
 builder.Services.Configure<FoodStoreDatabaseSettings>(
     builder.Configuration.GetSection("FoodStoreDatabase"));

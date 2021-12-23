@@ -14,10 +14,10 @@ namespace Mongodexample.Models;
         [BsonElement("name")]
         [JsonPropertyName("name")]
         public string name { get; set; } = null!;
-
         public string brand { get; set; } = null!;
         public decimal weight { get; set; }
         public decimal calories { get; set; }
+        public decimal carbohydrate { get; set; }
         public decimal sugar { get; set; }
         public decimal fat { get; set; }
         public decimal protiens { get; set; }
